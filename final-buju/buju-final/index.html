@@ -198,6 +198,9 @@
         else if (parsed["currently"]["icon"] === "clear-night"){
           var weatherStatus = "wi wi-night-clear";
         }
+        else if (parsed["currently"]["icon"] === "cloudy"){
+          var weatherStatus = "wi wi-day-cloudy";
+        }
 
         weatherImg.setAttribute("class", weatherStatus);
         weatherDiv.appendChild(weatherImg);
