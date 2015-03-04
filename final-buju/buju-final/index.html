@@ -1,0 +1,214 @@
+<html>
+<title>buju</title>
+<head>
+  <link rel="stylesheet" href="css/bujustyle.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nytimes.css">
+  <link rel="stylesheet" href="css/soloweather.css">
+  <link rel="stylesheet" href="weather_icons/weather-icons.css">
+</head>
+  <body>
+    <!-- spotify player -->
+    <iframe id="spotify" src="https://embed.spotify.com/?uri=spotify:user:1250679339:playlist:0pbHnaOr3cRY1napC9hrt7" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    <!-- sports bar -->
+    <div class="sports">
+      <a href="http://rangers.nhl.com/club/schedule.htm?season=20142015&gameType=2" target="_blank">
+        <img src="pics/nyrangers.png" id="nyr" class ="sportpic" height="50"/>
+      </a>
+      <a href="http://newyork.mets.mlb.com/index.jsp?c_id=nym" target="_blank">
+        <img src="pics/nymets.png" id="nymets" class ="sportpic" height="50"/>
+      </a>
+      <a href="http://espn.go.com/blog/new-york/giants" target="_blank">
+        <img src="pics/nygiants.png" id="nygiants" class ="sportpic" height="50"/>
+      </a>
+      <a href="#" target="_blank">
+        <img src="pics/nyknicks2.png" id="nyknicks" class ="sportpic" height="50"/>
+      </a>
+      <a href="http://football.fantasysports.yahoo.com/" target="_blank">
+        <img src="pics/yahoo.png" id="yahoo" class ="sportpic" height="50" style="border-radius: 10px"/>
+      </a>
+    </div>
+    <!-- social bar -->
+    <div class="others">
+      <a href="https://secure.skype.com/portal/overview" target="_blank">
+        <img src="pics/skype.png" id="skype" class ="otherpic" height="50"/>
+      </a>
+      <a href="https://princesspeach.slack.com/messages/general/" target="_blank">
+        <img src="pics/slack.png" id="slack" class ="otherpic" height="52"/>
+      </a>
+      <a href="https://www.linkedin.com/in/wwilcox" target="_blank">
+        <img src="pics/linkedin.png" id="linkedin" class ="otherpic" width="50"/>
+      </a>
+      <a href="https://venmo.com/" target="_blank">
+        <img src="pics/venmo.png" id="venmo" class ="otherpic" height="50"/>
+      </a>
+    </div>
+
+    <div id="lock">
+      <img src="pics/lock.png" id="lockpic" height="50"/>
+    </div>
+
+    <a href="https://www.facebook.com/" target="_blank">
+      <div id="facebook">
+        <img src="pics/fbhead.png" id="fbpic" height="45"/>
+      </div>
+    </a>
+    <a href="http://www.nytimes.com/" target="_blank">
+      <div id="nytimes">
+        <img src="pics/nytimes.png" id="nytimespic" height="500"/>
+      </div>
+    </a>
+
+    <a href="https://mail.google.com/mail/ca/u/0/?pli=1#inbox" target="_blank">
+      <div id="gmail1" class="gmail">
+        <img src="pics/gmail1.png" height="100px"/>
+        <h4 style="color: black; background-color: rgba(255,255,255,.3); padding: 3px; border-radius: 5px; border: solid 1px">wgmwilcox<span style="color: red; font-size: 16px">(3)</span></h4>
+      </div>
+    </a>
+
+    <a href="https://mail.google.com/mail/ca/u/1/#inbox" target="_blank">
+      <div id="gmail2" class="gmail">
+        <img src="pics/gmail2.png" height="100px"/>
+        <h4 style="color: black; background-color: rgba(255,255,255,.3); padding: 3px; border-radius: 5px; border: solid 1px">wwilcox88<span style="color: red; font-size: 16px">(12)</span></h4>
+      </div>
+    </a>
+    <!-- twitter widget -->
+    <div id="twitterActive">
+      <a class="twitter-timeline" href="https://twitter.com/wilwilco/lists/all" data-widget-id="568522431980388352"></a>
+    </div>
+    <!-- twitter widget script -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <script charset="utf-8">
+    //ny times box
+      var body = document.querySelector("body");
+      var div1 = document.createElement("div");
+      div1.setAttribute("id", "div1");
+      body.appendChild(div1);
+      var url = "/news";
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      xhr.addEventListener('load', function(e) {
+        var data = xhr.responseText;
+        var parsed = JSON.parse(data);
+        for(var i = 0; i < 19; i++){
+          //individual divs
+          var lilDiv = document.createElement("div");
+          lilDiv.setAttribute("class", "lilDiv");
+          div1.appendChild(lilDiv);
+          //a href
+          var link = document.createElement("a");
+          link.setAttribute("href", parsed["results"][i]["url"]);
+          link.setAttribute("target", "_blank");
+          link.setAttribute("style", "text-decoration: none");
+          div1.appendChild(link);
+
+          //byline
+          var byline = document.createElement("p");
+          byline.setAttribute("id", "byline");
+          byline.innerHTML = parsed["results"][i]["byline"];
+          div1.appendChild(byline);
+          //date
+          var date = document.createElement("p");
+          date.setAttribute("id", "date");
+          date.innerHTML = parsed["results"][i]["published_date"];
+          div1.appendChild(date);
+          //headline
+          var headline = document.createElement("h2");
+          headline.setAttribute("id", "headline");
+          headline.innerHTML = parsed["results"][i]["title"];
+          div1.appendChild(headline);
+          link.appendChild(headline);
+          //console.log(headline.innerHTML)
+          //abstract
+          var abstract = document.createElement("p");
+          abstract.setAttribute("id", "abstract");
+          abstract.innerHTML = parsed["results"][i]["abstract"];
+          div1.appendChild(abstract);
+          // //line break
+          var lineBreak = document.createElement("br");
+          div1.appendChild(lineBreak);
+
+        };
+
+      });
+      xhr.send();
+
+          // //image appender
+          // //need to fix for loop when articles do not have img url
+          // var imgNYTimes = document.createElement("img");
+          // imgNYTimes.setAttribute("id", "imgNYTimes");
+          // if(parsed["results"][i]["multimedia"][0]["url"]){
+          //   console.log("up")
+          //   imgNYTimes.setAttribute("src", parsed["results"][i]["multimedia"][0]["url"]);
+          //   console.log("down")
+          //
+          //   // //imgNYTimes.setAttribute("src", parsed["results"][i]["media"][0]["media-metadata"][0]["url"]);
+          // } else {
+          //   console.log("inside the thigns");
+          //   //var imgSync = document.createElement("img");
+          //   // imgSync.setAttribute("id", "imgSync");
+          //   imgNYTimes.setAttribute("src", "pics/timesny.png");
+          // };
+          //
+          // link.appendChild(imgNYTimes);
+
+      //weather
+      var body = document.querySelector("body");
+      var site = document.createElement("a");
+      site.setAttribute("href", "http://forecast.io/#/f/40.7142,-74.0064");
+      site.setAttribute("target", "_blank");
+      site.setAttribute("style", "text-decoration: none");
+      body.appendChild(site);
+
+      var weatherDiv = document.createElement("div");
+      weatherDiv.setAttribute("id", "weatherDiv");
+      site.appendChild(weatherDiv);
+
+      var url2 = "/weather";
+      var xhrx = new XMLHttpRequest();
+      xhrx.open("GET", url2);
+      xhrx.addEventListener('load', function(e) {
+        var data = xhrx.responseText;
+        var parsed = JSON.parse(data);
+        //temperature
+        var temp = document.createElement("h2");
+        temp.setAttribute("id", "temp");
+        console.log(parsed["currently"]["temperature"]);
+        temp.innerHTML = parseInt(parsed["currently"]["temperature"]) + ("°");
+        weatherDiv.appendChild(temp);
+        //icon
+        var weatherImg = document.createElement("h6");
+        weatherImg.setAttribute("id", "weatherImg")
+        weatherImg.setAttribute("class", parsed["currently"]["icon"]);
+        console.log(parsed["currently"]["icon"] + " = class right now");
+
+        if (parsed["currently"]["icon"] === "clear-day"){
+          var weatherStatus = "wi wi-day-sunny";
+        }
+        else if (parsed["currently"]["icon"] === "partly-cloudy-day"){
+          var weatherStatus = "wi wi-cloudy";
+        }
+        else if (parsed["currently"]["icon"] === "partly-cloudy-night"){
+          var weatherStatus = "wi wi-cloudy";
+        }
+        else if (parsed["currently"]["icon"] === "snow"){
+          var weatherStatus = "wi wi-snow";
+        }
+        else if (parsed["currently"]["icon"] === "clear-night"){
+          var weatherStatus = "wi wi-night-clear";
+        }
+
+        weatherImg.setAttribute("class", weatherStatus);
+        weatherDiv.appendChild(weatherImg);
+        console.log(weatherImg);
+
+      });
+      xhrx.send();
+
+    </script>
+    <!-- extra twitter widget? -->
+    <!-- // <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+
+  </body>
+</html>
