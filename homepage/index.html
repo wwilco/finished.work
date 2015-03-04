@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <title>miccheck12</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link href="site.css" rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header fade-in">
+        <ul>
+          <li>
+            <h2>WW/</h2>
+          </li>
+          <li>
+            <p><strong>WILLWILCOX</strong></p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="row">
+        <div class="box fade-in one">
+          <h1>Yo, my name is Will Wilcox</h1>
+        </div>
+      </div> -->
+
+      <div class="row vertical-center-row">
+        <a data-toggle="modal" data-target="#project-modal">
+          <div class="box two col-md-3 col-md-offset-3">
+            <h1>Projects</h1>
+          </div>
+        </a>
+
+        <a role="button" data-toggle="modal" data-target="#contact-modal">
+          <div class="box three col-md-3 col-md-offset-3">
+            <h1>Contact</h1>
+          </div>
+        </a>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <button type="button" class="btn btn-info">CONTACT</button>
+        </div>
+        <div class="col-md-3 col-md-offset-3">
+          <button type="button" class="btn btn-info">PROJECTS</button>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="project-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">PROJECTS</h4>
+          </div>
+          <div class="modal-project-body">
+            <ul>
+              <li>
+                <a href="http://willwilcox.net:8081/index-calc" target="_blank">
+                  <div class="showNhide">
+                    <div class="project-modal-pics" id="calc"></div>
+                    <p id="project-text" style="text-decoration:none">
+                      Calc-You-Later
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="http://willwilcox.net:3000/" target="_blank">
+                  <div class="showNhide">
+                    <div class="project-modal-pics" id="buju"></div>
+                    <p id="project-text">
+                      My Homepage
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="../../finished.work/t-shirts/views/index.erb" target="_blank">
+                  <div class="showNhide">
+                    <div class="project-modal-pics" id="tshirt"></div>
+                    <p id="project-text">
+                      T-Shirt Shop
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contact-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">CONTACT:</h4>
+          </div>
+          <div class="modal-contact-body">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/will.wilcox1" target="_blank">
+                  <div class="contact-modal-pics" id="contact1"></div>
+                </a>
+              </li>
+              <li>
+                <a href="http://instagram.com/willwilco" target="_blank">
+                  <div class="contact-modal-pics" id="contact2"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/wilwilco" target="_blank">
+                  <div class="contact-modal-pics" id="contact3"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/wwilco" target="_blank">
+                  <div class="contact-modal-pics" id="contact4"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/wwilcox" target="_blank">
+                  <div class="contact-modal-pics" id="contact5"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/" target="_blank">
+                  <div class="contact-modal-pics" id="contact6"></div>
+                </a>
+              </li>
+            </ul>
+            <p><a href="mailto:wgmwilcox@gmail.com" target="_blank">wgmwilcox@gmail.com</a> <br> 646.753.0987</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script>
+    // var introz = $( "#intro" );
+    // introz.animate({ "left": "-=850px" }, "slow" );
+    //
+    // var haha = $( "#haha" );
+    // haha.slideDown("slow");
+  </script>
+</html>
