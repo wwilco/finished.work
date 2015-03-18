@@ -153,8 +153,8 @@ h1 {
   overflow: hidden;
   background-size: cover;
   border-radius: 50px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   margin-top: 30px;
 }
 #calc {
@@ -166,6 +166,9 @@ h1 {
 #tshirt {
   background-image: url("pics/frawlzedit.png");
   border: 1px solid red;
+}
+#dapapp {
+  background-image: url("pics/dapapp.png");
 }
 #project-text {
   padding-top: 20px;
