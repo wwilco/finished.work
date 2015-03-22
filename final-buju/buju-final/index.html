@@ -204,6 +204,9 @@
         else if (parsed["currently"]["icon"] === "fog"){
           var weatherStatus = "wi wi-fog";
         }
+        else if (parsed["currently"]["icon"] === "rain"){
+          var weatherStatus = "wi wi-rain";
+        }
 
         weatherImg.setAttribute("class", weatherStatus);
         weatherDiv.appendChild(weatherImg);

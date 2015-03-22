@@ -1,15 +1,26 @@
 body {
   background-image: url('pics/finalattackXXX.png');
+
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: left;
+  -webkit-background-position: left;
+  -o-background-position: left;
 
   -webkit-background-size: cover;
-  -moz-background-size: cover;
   -o-background-size: cover;
+  /*moz-background-size: 100% auto;*/
+
+  /*-webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+       -o-background-size: 100% 100%;
+          background-size: 100% 100%;*/
+
+  /*-moz-border-image: url('pics/finalattackXXX.png') 0;*/
+
+
+  -moz-background-size: cover;
 
   /*-webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
   -o-background-size: 100% auto;*/
 }
 h1 {
@@ -37,45 +48,19 @@ h1 {
   animation-duration: 1s;
 }
 
-/*.fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}*/
+.fade-in.next {
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  animation-delay: .5s;
+}
 .fade-in.header {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
-.fade-in.pigeon {
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-#pigeon {
-  height: 100px;
-  width: 100px;
-  margin-right: 50px;
-  float: right;
-  margin-top: 300px;
-}
-#pigeon:hover {
-  opacity: .9;
-  transform: rotate(45deg);
-}
-/*.fade-in.two {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-.fade-in.three {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
-}*/
 
 .titleDiv {
-  /*font-size: 3.2vw;*/
+  font-size: 3.2vw;
 }
 .box {
   /*position: relative;*/
@@ -91,6 +76,7 @@ h1 {
   -o-height: 5vw;
   border-radius: 15px;
   display:inline-block;
+  box-shadow: 10px 10px 5px rgba(0,0,0,.1);
 
 }
 /*.one {
@@ -102,8 +88,7 @@ h1 {
   position: absolute;
   margin-left:50%;
   top: 30%;
-  -o-float: left;
-
+  /*-o-float: left;*/
 }
 
 .three {
@@ -119,6 +104,18 @@ h1 {
   background: rgba(177,179,181,.8);
 }
 
+/*.two:active {
+
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
+    box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
+    position: fixed;
+    top: 6px;
+
+  position: relative;
+  top: 1px;
+}*/
+
 /*logo*/
 
 .header {
@@ -130,7 +127,7 @@ h1 {
 h1 {
   font-size: 35px;
 }
-.header h1 h4 {
+.header h2 h4 {
   float: right;
   margin: 0 auto;
   padding: 0px;
@@ -141,6 +138,9 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
+  text-shadow: 10px 10px 5px rgba(0,0,0,.1);
+  color: rgba(0,0,0,.8);
+
 }
 .header li p {
   float: right;
@@ -240,77 +240,85 @@ h1 {
   background-image: url("pics2/Googleplus.png");
 }
 
-/*h2 {
-  font-size: 40px;
-  color: rgba(0,0,0,.9);
-  font-family: verdana;
 
+/*Media Queries*/
+@media (min-width: 320px) {
+  .box {
+    float: left;
+  }
 }
-.footer h2 h4 {
-  float: left;
-  margin: 0 auto;
-  padding: 0px;
+@media (min-width: 768px) {
+  .box {
+    left: 0%;
+  }
 }
-.footer li {
-  display: inline-block;
-  font-family: verdana;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px;
+@media (min-width: 992px) {
+  .box {
+    left: 0%;
+  }
 }
-.footer li p {
-  float: right;
-
-  margin: 0 auto;
-  padding: 0px;
-}*/
-
-
-/*#intro, #contact, #projects {
-  position: relative;
-  margin-left: 1000px;
-  margin-top: 100px;
-  color: red;
-  background-color: #3DA6FC;
-  text-align: center;
-  display: inline-block;
-  border-radius: 15px;
+@media (min-width: 1200px) {
+  .box {
+    left: 0%;
+  }
 }
 
-#haha {
-  color: red;
-  width: 1000px;
-  height: 100px;
-  position: relative;
-}*/
-
-
-/*old animation*/
-/*div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  position: relative;
-  -webkit-animation: myfirst 5s;
-  animation: myfirst 5s;
+/*.fade-in.pigeon {
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
 }
-
-
-@-webkit-keyframes myfirst {
-  0%   {background:red; left:0px; top:0px;}
-  25%  {background:yellow; left:200px; top:0px;}
-  50%  {background:blue; left:200px; top:200px;}
-  75%  {background:green; left:0px; top:200px;}
-  100% {background:red; left:0px; top:0px;}
-}*/
-
-
-
-
-/*#mePic, img {
-  border-radius: 350px;
-  height: 35%;
-  margin-top: 16.5%;
-  margin-left: 11.5%;
+#pigeon {
+  height: 7vw;
+  width: 7vw;
+  bottom: 45%;
+  right: 10%;
   position: fixed;
+}*/
+/*.pigeon {
+  position: relative;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-play-state: paused;
+
+  -webkit-transform: translateY(200px);
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+}*/
+
+/*@-webkit-keyframes example {
+
+  from {
+    -webkit-transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(200px), translateX(200px);
+  }
+    0%   {left:85%; top:-100px;}
+    100%  {left:85%; top:40%;}
+}*/
+
+
+/*#pigeon:hover {
+  opacity: .9;
+
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}*/
+
+/*.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }*/
