@@ -77,6 +77,7 @@ h1 {
   border-radius: 15px;
   display:inline-block;
   box-shadow: 10px 10px 5px rgba(0,0,0,.1);
+  cursor: pointer;
 
 }
 /*.one {
@@ -103,18 +104,6 @@ h1 {
 .three:hover {
   background: rgba(177,179,181,.8);
 }
-
-/*.two:active {
-
-  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
-    -moz-box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
-    box-shadow: 0px 4px 0px rgba(0, 0, 0,1), 0px 4px 7px rgba(0,0,0,.9);
-    position: fixed;
-    top: 6px;
-
-  position: relative;
-  top: 1px;
-}*/
 
 /*logo*/
 
@@ -169,8 +158,8 @@ h1 {
   overflow: hidden;
   background-size: cover;
   border-radius: 50px;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   margin-top: 30px;
 }
 #calc {
@@ -185,6 +174,9 @@ h1 {
 }
 #dapapp {
   background-image: url("pics/dapapp.png");
+}
+#nixon {
+  background-image: url("../nixon/pics/watchCompress.png");
 }
 #project-text {
   padding-top: 20px;
